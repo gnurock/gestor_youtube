@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{{ url_for('static', filename ='css/estilo.css') }}">
+<head>
+    <title>
+        Descargar videos de youtube
+    </title>
+</head>
+<body id="bootstrap-themes" class="swag-line">
+    <!-- Search form -->
+<div class="container">
+    <div class="panel panel-default m-b-0">
+        <div class="panel-body">
+            <div class="div-form">
+                <div>
+      
+
+                    <for id="search-form" class="form-inline form-search" action="http://127.0.0.1:5000/descarga" method="post">
+
+                        <h1 class="hero-header">Descargar videos de youtube</h1>
+                        <input id="txt-url" name="query" class="form-control input-lg" type="text" placeholder="Ingresa el nombre de la canción o la url del video" >
+                        <button type="submit" class="btn-lg" type="submit" value="Descargar">Buscar</button>
+                
+                    </form>
+                <hr>
+                <!--Aqui viene la imagen de la vista previas-->
+                </div>
+                <div class="tabs row">
+                    <div class="col-xs-12 col-sm-5 col-md-5">
+                        <div class="thumbnail cover">
+                            <img src="{{url_for('static', filename='imagenes/img1.jpg')}}"/>
+                         
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-7 col-md-7">
+                        <h3 class=""> Videos recomendados </h3>  
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#mp4" data-toggle="tab">video</a>
+                        
+                            </li>
+                            <li class="active">
+                              <a href="#mp3" data-toggle="tab">audio</a>
+                            </li>
+                            
+                        </ul>
+                        <table class="table">
+
+                        <thead>
+                            <tr>
+                                <td>Nombre del video</td>
+                                <td>Duracion </td>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <!--Iterar resultados de youtube -->
+                            <tr>
+                                {%for sugerencia  in  sugerencias %}
+                                    <tr>
+                                        <td>
+                                            {{sugerencia.0}}
+                                        </td>
+                                        <td>
+                                            {{sugerencia.1}} segundos
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-secondary">
+                                                Agregar
+                                                
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                {%endfor%}
+
+                            </tr>
+                            
+                            <tr>
+                                <td> Yo quiero ser - perro callejero letra</td>
+                                <td> 220 segundos </td>
+                                <td>  <button class="btn btn-secondary"> Agregar </button> </td>                
+                            </tr>
+                            <tr>
+                                <td> Mutter (Rammstein) </td>
+                                <td> 220 segundos </td>
+                                <td>  <button class="btn btn-secondary"> Agregar </button> </td>                
+                            </tr>
+                            <tr>
+                                <td> <button class="btn btn-primary">Iniciar Descargas </button></td>
+                
+                            </tr>
+                        </tbody>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>  
+    </div>
+    
+</div>
+
+
+
+
+</body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</html>

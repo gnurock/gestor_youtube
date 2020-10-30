@@ -1,0 +1,56 @@
+
+.panel {
+ margin-bottom:22px;
+ background-color:#fff;
+ border:1px solid transparent;
+ border-radius:4px;
+ -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.05);
+ box-shadow:0 1px 1px rgba(0,0,0,0.05)
+
+}
+
+.panel-body {
+ padding:15px
+}
+
+#search-form {
+    margin: 36px auto;
+    max-width: 600px;
+    position: relative;
+}
+
+#search-form #txt-url {
+    padding-right: 60px;
+    width: 100%;
+    height: 43px;
+    border: 1px solid #ff0068;
+    border-radius: 4px;
+}
+
+.thumbnail{
+	height: 480px;
+	width: 320px;
+	margin: 0 auto;
+	vertical-align: middle;
+	border: 0;
+
+}
+
+.btn-lg {
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #ff0068;
+    background: #f20a51;
+    font-weight: 400;
+}
+
+img {
+  max-width: 380px;
+  height: 220px;
+}
+
+.form-control {
+
+}
